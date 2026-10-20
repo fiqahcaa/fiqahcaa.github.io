@@ -39,11 +39,11 @@ document.querySelectorAll('.filter').forEach(button => button.addEventListener('
 }));
 // Academic project details. Add real images later by setting each image path.
 const projects = {
-  fyp: { title: 'AI-Generated Response Detection Using SVM (FYP)', description: 'Developing a support vector machine (SVM) model to identify AI-generated responses in online assessments.', highlights: ['Research and development of an SVM-based detection model', 'Python-based machine learning workflow', 'Focus on AI-generated responses in online assessments'], image: '' },
-  student: { title: 'Student Performance Prediction', description: 'A predictive analytics system developed using Python, Random Forest, and Streamlit.', highlights: ['Random Forest prediction model', 'Interactive Streamlit application', 'Student performance analytics'], image: '' },
+  fyp: { title: 'AI-Generated Response Detection Using SVM (FYP)', description: 'Developing a support vector machine (SVM) model to identify AI-generated responses in online assessments.', highlights: ['Research and development of an SVM-based detection model', 'Python-based machine learning workflow', 'Focus on AI-generated responses in online assessments'], images: [{src:'images/fyp-login.png',caption:'Login interface'}, {src:'images/fyp-submit.png',caption:'Text submission'}, {src:'images/fyp-results.png',caption:'Detection analysis'}] },
+  student: { title: 'Student Performance Prediction', description: 'A predictive analytics system developed using Python, Random Forest, and Streamlit.', highlights: ['Random Forest prediction model', 'Interactive Streamlit application', 'Student performance analytics'], images: [{src:'images/student-prediction.png',caption:'CGPA predictor — interactive Streamlit application'}] },
   heart: { title: 'Heart Attack Risk Prediction', description: 'A classification project using the J48 decision tree algorithm in WEKA.', highlights: ['J48 classification model', 'Model development and analysis using WEKA', 'Heart attack risk prediction'], image: '' },
   butterfly: { title: 'Butterfly Recognition Using CNN', description: 'An image recognition project using convolutional neural networks (CNN) in MATLAB.', highlights: ['CNN-based image recognition', 'MATLAB implementation', 'Butterfly classification'], image: '' },
-  ecommerce: { title: 'E-Commerce Sales Insights Dashboard', description: 'An interactive Power BI dashboard for exploring sales performance, customer behavior, and product profitability.', highlights: ['Power BI visualizations', 'Data transformation with Power Query', 'Measures and analysis using DAX'], image: '' },
+  ecommerce: { title: 'E-Commerce Sales Insights Dashboard', description: 'An interactive Power BI dashboard for exploring sales performance, customer behavior, and product profitability.', highlights: ['Power BI visualizations', 'Data transformation with Power Query', 'Measures and analysis using DAX'], images: [{src:'images/ecommerce-landing.png',caption:'Dashboard landing page'}, {src:'images/ecommerce-overview.png',caption:'Executive overview'}, {src:'images/ecommerce-products.png',caption:'Product, pricing & profitability'}, {src:'images/ecommerce-customers.png',caption:'Customer behaviour analysis'}, {src:'images/ecommerce-regional.png',caption:'Regional & operational performance'}] },
   hostel: { title: 'Kolej Kerawang Management System', description: 'A hostel management application developed with Java NetBeans featuring QR code check-in and check-out.', highlights: ['Hostel management workflows', 'QR code-based check-in', 'QR code-based check-out'], image: '' },
   books: { title: 'Book Management System', description: 'A Java-based application developed using NetBeans IDE to manage and organize book records.', highlights: ['Java application built in NetBeans', 'Book record management', 'Organizing book information'], image: '' }
 };
@@ -57,11 +57,22 @@ document.querySelectorAll('.project-open').forEach(button => button.addEventList
   list.replaceChildren();
   p.highlights.forEach(item => { const li = document.createElement('li'); li.textContent = item; list.append(li); });
   dialogImage.replaceChildren();
-  if (p.image) {
-    const img = document.createElement('img'); img.src = p.image; img.alt = `Approved screenshot of ${p.title}`; img.loading = 'lazy'; dialogImage.append(img);
+  if (p.images?.length) {
+    const gallery = document.createElement('div'); gallery.className = 'screenshot-gallery';
+    p.images.forEach((entry, index) => {
+      const figure = document.createElement('figure');
+      const picture = document.createElement('img'); picture.src = entry.src;
+      picture.alt = `${p.title}: ${entry.caption}`; picture.loading = 'lazy';
+      picture.tabIndex = 0; picture.title = 'Click to view full-size screenshot';
+      picture.addEventListener('click', () => window.open(entry.src, '_blank', 'noopener,noreferrer'));
+      picture.addEventListener('keydown', ev => { if (ev.key === 'Enter') picture.click(); });
+      const caption = document.createElement('figcaption'); caption.textContent = `${index + 1}. ${entry.caption}`;
+      figure.append(picture, caption); gallery.append(figure);
+    });
+    dialogImage.append(gallery);
   } else {
-    const message = document.createElement('span'); message.textContent = 'Project screenshot placeholder';
-    const note = document.createElement('small'); note.textContent = 'Add a screenshot in the images folder when available.';
+    const message = document.createElement('span'); message.textContent = 'Screenshots coming soon';
+    const note = document.createElement('small'); note.textContent = 'Project information is available above. Images will be added later.';
     dialogImage.append(message, note);
   }
   dialog.showModal();

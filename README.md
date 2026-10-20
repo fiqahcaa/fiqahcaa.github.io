@@ -1,24 +1,13 @@
-# Nor Afiqah — Academic Developer Portfolio
+# Nor Afiqah — Academic Project Portfolio
 
-Website portfolio for **fiqahcaa.github.io**, highlighting **7 academic projects** (AI & Machine Learning, Data Analytics, and Software Development). Internship/professional projects are intentionally **not included** in this version.
+Portfolio site for `https://fiqahcaa.github.io`. Contains seven academic projects.
 
-## Preview
-Open `index.html` in your browser. No installation needed.
+Actual screenshots are currently included for:
+- AI-Generated Responses Detection Using SVM (3 screenshots)
+- E-Commerce Sales Insights Dashboard (5 screenshots)
+- Student Performance Prediction Using Random Forest (1 screenshot)
 
-## Upload updated version to GitHub
-1. Extract the ZIP file.
-2. Open the repository `fiqahcaa/fiqahcaa.github.io`.
-3. Choose **Add file → Upload files**.
-4. Upload `index.html`, `style.css`, `script.js`, and `README.md` from *inside* the extracted folder.
-5. When GitHub asks about existing files, use GitHub's web editor for each file instead, or upload via GitHub Desktop (which supports replacing existing files). If this is your first upload, uploading all files directly is sufficient.
-6. Commit the changes to `main`.
-7. Enable **Settings → Pages → Deploy from a branch → main → /(root)** if not already enabled.
-8. Open `https://fiqahcaa.github.io/` after deployment.
+Other projects remain listed with placeholder images until screenshots are available.
 
-## Add screenshots
-Create an `images/` folder, add your screenshots, then update the `image` field for the relevant project in `script.js` (e.g. `image: 'images/fyp.png'`). The project cards currently use illustrative mockups.
-
-## Notes
-- Book Management System year is omitted until confirmed.
-- The FYP is labeled as in development, consistent with the project description provided.
-- Do not upload datasets, login credentials, private documents, or other material that should not be public.
+## Publishing
+Upload `index.html`, `style.css`, `script.js`, `README.md` and the entire `images/` folder to the **root** of the `fiqahcaa.github.io` repository. Enable Pages on branch `main` and folder `/(root)`.
