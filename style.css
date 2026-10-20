@@ -63,3 +63,18 @@
 .involvement-year{color:var(--accent);font-weight:800;font-size:13px;padding-top:2px;min-width:40px}.involvement-item h4{margin:0 0 6px;font-size:15px}.involvement-item p{margin:0;color:var(--muted);font-size:13px}
 @media(max-width:900px){.recognition-grid{grid-template-columns:1fr 1fr}.recognition-card:last-child{grid-column:1/-1}}
 @media(max-width:720px){.recognition-grid,.involvement-grid{grid-template-columns:1fr}.recognition-card:last-child{grid-column:auto}.recognition-card{min-height:0}.involvement-heading{margin-top:46px}}
+
+/* V7: smaller professional portrait layered over the original V1 code window */
+.overlap-stage{min-height:480px;display:block;position:relative;isolation:isolate;padding:35px 42px 55px 0}
+.overlap-code{width:92%;min-height:375px;transform:rotate(-3deg);border:1px solid color-mix(in srgb,var(--accent) 32%,transparent);border-radius:19px;overflow:hidden;background:linear-gradient(150deg,#192e47,#0c1829 82%);box-shadow:0 25px 70px rgba(0,0,0,.3)}
+.overlap-code .visual-top{background:rgba(255,255,255,.03)}
+.overlap-code-body{padding:20px 23px 35px;color:#cbdbea;font:13px/1.85 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:nowrap}
+.overlap-code-body em{font-style:normal;color:#c6b0ff}.overlap-code-body i{font-style:normal;color:#7ce2ca}
+.overlap-terminal{margin-top:22px;color:#dfeeff}.overlap-terminal strong{font-weight:500;color:#7ce2ca}
+.overlap-portrait{position:absolute;right:1%;bottom:7%;width:195px;height:234px;border:5px solid var(--accent);border-radius:95px 95px 28px 28px;overflow:hidden;background:#d9d2c8;box-shadow:0 20px 50px rgba(0,0,0,.5);transform:rotate(4deg);z-index:2}
+.overlap-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block}
+.overlap-badge-top{top:8%;right:-1%;z-index:3}
+.overlap-badge-bottom{bottom:3%;left:1%;z-index:3}
+@media(max-width:1000px){.overlap-stage{padding-right:12px}.overlap-code{width:100%}.overlap-portrait{width:165px;height:200px;right:-1%;bottom:9%}.overlap-code-body{font-size:11px;padding-left:14px}.overlap-badge-top{right:0}}
+@media(max-width:720px){.overlap-stage{order:-1;width:min(100%,485px);margin-inline:auto;min-height:410px;padding:20px 27px 34px 4px}.overlap-code{width:94%;min-height:345px}.overlap-portrait{width:155px;height:185px;right:1%;bottom:4%}.overlap-badge-top{right:1%;top:4%}.overlap-badge-bottom{left:4%;bottom:1%}}
+@media(max-width:400px){.overlap-stage{min-height:355px;padding-right:12px}.overlap-code{min-height:315px;width:97%}.overlap-code-body{font-size:9px;padding:18px 12px 24px}.overlap-portrait{width:125px;height:158px;bottom:7%;right:0}.overlap-badge-bottom{bottom:1%}}
