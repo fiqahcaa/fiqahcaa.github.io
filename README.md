@@ -22,8 +22,14 @@ Updated Home, Education and focus-area cards, with AI-enhanced profile portrait 
 - Email: afiqah.azaharuddin@gmail.com
 - GitHub: https://github.com/fiqahcaa
 
-The resume button is intentionally not active until a CV is ready. To enable it later, upload a public-safe PDF to `assets/Nor_Afiqah_Resume.pdf` and replace the `resume-pending` span in `index.html` with an `<a href="assets/Nor_Afiqah_Resume.pdf" download class="btn btn-secondary">Download resume ↓</a>` element.
 
 
-## Resume (v4)
-The public-facing resume PDF is at `assets/Nor_Afiqah_Resume.pdf`. A privacy-protecting copy was produced from the uploaded resume: residential address, phone number, and referee section were redacted. Review the resume content (particularly the outdated internship-seeking summary) before public sharing.
+## Version 5 updates
+- Added an Achievements section with Dean’s List, PRIDE Showcase recognition, and IBM SkillsBuild certification.
+- Added academic leadership and committee involvement.
+- Updated education to show the programme and CGPA reported in the provided resume.
+- Internship projects remain excluded.
+
+
+## Version 6 update
+Removed resume links/buttons from the Home and Contact sections. The PDF is intentionally not included in this ZIP. If the PDF was previously uploaded to GitHub, delete `assets/Nor_Afiqah_Resume.pdf` from the repository separately.
