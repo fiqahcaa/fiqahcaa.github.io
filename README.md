@@ -11,3 +11,7 @@ Other projects remain listed with placeholder images until screenshots are avail
 
 ## Publishing
 Upload `index.html`, `style.css`, `script.js`, `README.md` and the entire `images/` folder to the **root** of the `fiqahcaa.github.io` repository. Enable Pages on branch `main` and folder `/(root)`.
+
+
+## Version 2
+Updated Home, Education and focus-area cards, with AI-enhanced profile portrait at `images/profile-afiqah.webp`. Internship projects are intentionally excluded.

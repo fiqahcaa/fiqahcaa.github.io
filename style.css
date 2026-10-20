@@ -22,3 +22,22 @@
 .screenshot-gallery figcaption{padding:10px 12px;font-size:12px;color:var(--muted)}
 .dialog-image:has(.screenshot-gallery){border:none;background:transparent;display:block}
 @media(max-width:520px){.screenshot-gallery{grid-template-columns:1fr;padding:0}.screenshot-gallery img{height:auto;max-height:260px}}
+
+/* v2 personal identity, photography and experience */
+.hero{grid-template-columns:1.15fr .85fr;gap:55px;min-height:700px}
+.hero-name{font-size:clamp(36px,4.15vw,63px);line-height:1.13;overflow-wrap:break-word}
+.career-line{font-family:'Space Grotesk',sans-serif;color:var(--text);font-size:clamp(15px,1.6vw,20px);font-weight:600;line-height:1.65;max-width:570px}
+.career-line span{color:var(--accent);margin:0 .24em}
+.portrait-stage{position:relative;min-height:510px;display:grid;place-items:center;isolation:isolate}
+.portrait-halo{position:absolute;inset:9% 0 7%;border-radius:45% 55% 40% 60%;background:linear-gradient(130deg,color-mix(in srgb,var(--accent) 35%,transparent),color-mix(in srgb,var(--accent2) 18%,transparent));filter:blur(25px);z-index:-1}
+.portrait-frame{position:relative;width:min(100%,385px);height:465px;overflow:hidden;border-radius:170px 170px 35px 35px;border:5px solid color-mix(in srgb,var(--accent) 40%,var(--surface));background:#ded6cf;box-shadow:0 35px 90px rgba(0,0,0,.3)}
+.portrait-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.portrait-badge{position:absolute;padding:10px 16px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:12px;color:var(--text);font-size:12px;font-weight:700}
+.badge-code{top:15%;left:-3%}.badge-data{bottom:14%;right:-4%}
+.education-card{border:1px solid var(--line);background:var(--surface);border-radius:18px;display:flex;gap:25px;padding:32px;align-items:center}
+.education-card h3{margin:8px 0;font-size:clamp(21px,2.5vw,29px)}.education-card p{margin:0;color:var(--muted)}.education-card .education-sub{margin-top:8px;font-size:13px}
+.education-symbol{width:70px;height:70px;display:grid;place-items:center;background:var(--surface2);border-radius:18px;font-size:30px;flex-shrink:0}
+.strength-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.strength-card{padding:26px;border:1px solid var(--line);border-radius:17px;background:var(--surface)}.strength-card>span{color:var(--accent);font-weight:800}.strength-card h3{font-size:20px;margin:18px 0 12px}.strength-card p{color:var(--muted);font-size:14px;margin-bottom:0}
+@media(max-width:900px){.hero{gap:25px}.portrait-frame{height:400px}.portrait-stage{min-height:450px}.badge-code{left:0}.badge-data{right:0}}
+@media(max-width:720px){.hero{grid-template-columns:1fr;gap:18px;padding-top:55px}.portrait-stage{min-height:415px;order:-1}.portrait-frame{width:min(76%,310px);height:385px}.hero-copy{text-align:center}.eyebrow,.hero-buttons,.hero-stats{justify-content:center}.hero-name{font-size:clamp(35px,8vw,50px)}.strength-grid{grid-template-columns:1fr}.badge-code{left:2%}.badge-data{right:2%}.education-card{align-items:flex-start}}
+@media(max-width:420px){.portrait-frame{height:335px}.portrait-stage{min-height:370px}.portrait-badge{font-size:10px;padding:8px}.education-card{padding:20px;gap:14px}.education-symbol{height:45px;width:45px;font-size:23px}}
